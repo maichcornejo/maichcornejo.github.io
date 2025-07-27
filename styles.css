@@ -15,10 +15,10 @@ body {
   }
 
   header img.logo {
-    width: 80px; /* más chico */
-    height: 64px;
+    width: 200px; 
+    height: 200px;
     object-fit: cover;
-    border-radius: 50%; /* redondo completo */
+    border-radius: 50%; 
     border: 2px solid #d36b9a; /* marco rosa */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* sombrita sutil */
     margin-bottom: 1rem;
@@ -29,7 +29,7 @@ body {
   }
   
   header img.logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
   }
   
   header h1 {
@@ -47,6 +47,24 @@ body {
     padding: 2rem 1rem;
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  ul img.logo {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12%; 
+    border: 2px solid #d36b9a; /* marco rosa */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* sombrita sutil */
+    margin-bottom: 1rem;
+  }
+
+  ul img.logo {
+    transition: transform 0.3s ease;
+  }
+  
+  ul img.logo:hover {
+    transform: scale(1.10);
   }
   
   section h2 {
@@ -72,6 +90,25 @@ body {
     font-weight: bold;
     color: #5a5a5a;
   }
+
+  .skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .skills-icons i {
+    font-size: 3rem;
+    color: #d36b9a;
+    transition: transform 0.3s ease;
+  }
+  
+  .skills-icons i:hover {
+    transform: scale(1.1);
+  }
+  
   
   footer {
     text-align: center;

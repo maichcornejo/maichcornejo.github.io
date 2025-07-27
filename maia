@@ -1,0 +1,45 @@
+#!/bin/bash
+
+IMAGE_NAME="maia-portfolio"
+CONTAINER_NAME="portfolio-local"
+PORT="8080"
+
+function build() {
+  echo "🔨 Construyendo la imagen..."
+  docker build -t $IMAGE_NAME .
+}
+
+function up() {
+  echo "🚀 Levantando el contenedor en http://localhost:$PORT ..."
+  docker run -d -p $PORT:80 --name $CONTAINER_NAME $IMAGE_NAME
+}
+
+function down() {
+  echo "🛑 Deteniendo y eliminando el contenedor..."
+  docker stop $CONTAINER_NAME 2>/dev/null
+  docker rm $CONTAINER_NAME 2>/dev/null
+}
+
+function restart() {
+  build
+  down
+  up
+}
+
+case "$1" in
+  build)
+    build
+    ;;
+  up)
+    up
+    ;;
+  down)
+    down
+    ;;
+  restart)
+    restart
+    ;;
+  *)
+    echo "Uso: ./maia.sh {build|up|down|restart}"
+    ;;
+esac
