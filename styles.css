@@ -15,7 +15,7 @@ body {
   }
 
   header img.logo {
-    width: 64px; /* más chico */
+    width: 80px; /* más chico */
     height: 64px;
     object-fit: cover;
     border-radius: 50%; /* redondo completo */
