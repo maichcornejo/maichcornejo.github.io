@@ -15,11 +15,23 @@ body {
   }
 
   header img.logo {
-    width: 100px;
-    height: auto;
-    border-radius: 20px;
+    width: 64px; /* más chico */
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%; /* redondo completo */
+    border: 2px solid #d36b9a; /* marco rosa */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* sombrita sutil */
     margin-bottom: 1rem;
   }
+
+  header img.logo {
+    transition: transform 0.3s ease;
+  }
+  
+  header img.logo:hover {
+    transform: scale(1.05);
+  }
+  
   
   
   header h1 {
